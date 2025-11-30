@@ -4,6 +4,28 @@
     "C:\\Users\\משתמש\\OneDrive\\שולחן העבודה\\webApi\\GaragesAPI\\GaragesController\\GaragesController.csproj": {}
   },
   "projects": {
+    "C:\\Users\\משתמש\\OneDrive\\שולחן העבודה\\webApi\\GaragesAPI\\GaragesBLL\\GaragesBLL.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\Users\\משתמש\\OneDrive\\שולחן העבודה\\webApi\\GaragesAPI\\GaragesBLL\\GaragesBLL.csproj",
+        "projectName": "GaragesBLL",
+        "projectPath": "C:\\Users\\משתמש\\OneDrive\\שולחן העבודה\\webApi\\GaragesAPI\\GaragesBLL\\GaragesBLL.csproj",
+        "frameworks": {
+          "net48": {
+            "projectReferences": {
+              "C:\\Users\\משתמש\\OneDrive\\שולחן העבודה\\webApi\\GaragesAPI\\GaragesDAL\\GaragesDAL.csproj": {
+                "projectPath": "C:\\Users\\משתמש\\OneDrive\\שולחן העבודה\\webApi\\GaragesAPI\\GaragesDAL\\GaragesDAL.csproj"
+              },
+              "C:\\Users\\משתמש\\OneDrive\\שולחן העבודה\\webApi\\GaragesAPI\\GaragesDTO\\GaragesDTO.csproj": {
+                "projectPath": "C:\\Users\\משתמש\\OneDrive\\שולחן העבודה\\webApi\\GaragesAPI\\GaragesDTO\\GaragesDTO.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net48": {}
+      }
+    },
     "C:\\Users\\משתמש\\OneDrive\\שולחן העבודה\\webApi\\GaragesAPI\\GaragesController\\GaragesController.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -27,7 +49,11 @@
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\משתמש\\OneDrive\\שולחן העבודה\\webApi\\GaragesAPI\\GaragesBLL\\GaragesBLL.csproj": {
+                "projectPath": "C:\\Users\\משתמש\\OneDrive\\שולחן העבודה\\webApi\\GaragesAPI\\GaragesBLL\\GaragesBLL.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -65,6 +91,40 @@
           },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
         }
+      }
+    },
+    "C:\\Users\\משתמש\\OneDrive\\שולחן העבודה\\webApi\\GaragesAPI\\GaragesDAL\\GaragesDAL.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\Users\\משתמש\\OneDrive\\שולחן העבודה\\webApi\\GaragesAPI\\GaragesDAL\\GaragesDAL.csproj",
+        "projectName": "GaragesDAL",
+        "projectPath": "C:\\Users\\משתמש\\OneDrive\\שולחן העבודה\\webApi\\GaragesAPI\\GaragesDAL\\GaragesDAL.csproj",
+        "frameworks": {
+          "net48": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net48": {}
+      }
+    },
+    "C:\\Users\\משתמש\\OneDrive\\שולחן העבודה\\webApi\\GaragesAPI\\GaragesDTO\\GaragesDTO.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\Users\\משתמש\\OneDrive\\שולחן העבודה\\webApi\\GaragesAPI\\GaragesDTO\\GaragesDTO.csproj",
+        "projectName": "GaragesDTO",
+        "projectPath": "C:\\Users\\משתמש\\OneDrive\\שולחן העבודה\\webApi\\GaragesAPI\\GaragesDTO\\GaragesDTO.csproj",
+        "frameworks": {
+          "net48": {
+            "projectReferences": {
+              "C:\\Users\\משתמש\\OneDrive\\שולחן העבודה\\webApi\\GaragesAPI\\GaragesDAL\\GaragesDAL.csproj": {
+                "projectPath": "C:\\Users\\משתמש\\OneDrive\\שולחן העבודה\\webApi\\GaragesAPI\\GaragesDAL\\GaragesDAL.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net48": {}
       }
     }
   }

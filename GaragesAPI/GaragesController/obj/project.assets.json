@@ -72,6 +72,40 @@
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
         ]
+      },
+      "GaragesBLL/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "GaragesDAL": "1.0.0",
+          "GaragesDTO": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/GaragesBLL.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/GaragesBLL.dll": {}
+        }
+      },
+      "GaragesDAL/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/GaragesDAL.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/GaragesDAL.dll": {}
+        }
+      },
+      "GaragesDTO/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "GaragesDAL": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/GaragesDTO.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/GaragesDTO.dll": {}
+        }
       }
     }
   },
@@ -200,10 +234,26 @@
         "swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512",
         "swashbuckle.aspnetcore.swaggerui.nuspec"
       ]
+    },
+    "GaragesBLL/1.0.0": {
+      "type": "project",
+      "path": "../GaragesBLL/GaragesBLL.csproj",
+      "msbuildProject": "../GaragesBLL/GaragesBLL.csproj"
+    },
+    "GaragesDAL/1.0.0": {
+      "type": "project",
+      "path": "../GaragesDAL/GaragesDAL.csproj",
+      "msbuildProject": "../GaragesDAL/GaragesDAL.csproj"
+    },
+    "GaragesDTO/1.0.0": {
+      "type": "project",
+      "path": "../GaragesDTO/GaragesDTO.csproj",
+      "msbuildProject": "../GaragesDTO/GaragesDTO.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "GaragesBLL >= 1.0.0",
       "Swashbuckle.AspNetCore >= 6.2.3"
     ]
   },
@@ -233,7 +283,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\משתמש\\OneDrive\\שולחן העבודה\\webApi\\GaragesAPI\\GaragesBLL\\GaragesBLL.csproj": {
+              "projectPath": "C:\\Users\\משתמש\\OneDrive\\שולחן העבודה\\webApi\\GaragesAPI\\GaragesBLL\\GaragesBLL.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

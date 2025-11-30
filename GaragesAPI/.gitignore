@@ -1,0 +1,13 @@
+*.user
+*.suo
+
+bin/
+obj/
+
+packages/
+
+# Logs
+*.log
+
+*.cache
+*.tmp
