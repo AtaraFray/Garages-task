@@ -159,7 +159,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GaragesDAL.cs" />
+    <Compile Include="GarageDAL.cs" />
     <Compile Include="IGaragesDAL.cs" />
     <Compile Include="Models\Garages.cs" />
     <Compile Include="Models\GaragesDBContext.cs" />

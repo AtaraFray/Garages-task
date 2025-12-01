@@ -26,10 +26,12 @@ namespace GaragesBLL
         {
             await garageDAL.AddGarage(mapper.Map<GarageDTO, Garages>(garage));
         }
+    
 
         public async Task<List<GarageDTO>> GetAllGarages()
         {
-            return await mapper.Map<Task<List<Garages>>, Task<List<GarageDTO>>>(garageDAL.GetAllGarages());
+            var garages = await garageDAL.GetAllGarages();
+            return mapper.Map<List<GarageDTO>>(garages);
         }
     }
 }

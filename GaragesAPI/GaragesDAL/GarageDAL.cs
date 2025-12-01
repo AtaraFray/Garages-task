@@ -8,11 +8,11 @@ using Microsoft.EntityFrameworkCore;
 
 namespace GaragesDAL
 {
-    public class GaragesDAL : IGaragesDAL
+    public class GarageDAL : IGaragesDAL
     {
         private readonly GaragesDBContext garagesDb;
 
-        public GaragesDAL(GaragesDBContext garagesDb)
+        public GarageDAL(GaragesDBContext garagesDb)
         {
             this.garagesDb = garagesDb;
         }
