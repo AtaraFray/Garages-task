@@ -1,0 +1,42 @@
+# ===== Visual Studio =====
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# ===== Build =====
+bin/
+obj/
+Debug/
+Release/
+
+# ===== NuGet =====
+packages/
+*.nupkg
+project.lock.json
+project.fragment.lock.json
+
+# ===== Logs =====
+*.log
+
+# ===== Cache / Temp =====
+*.cache
+*.tmp
+
+# ===== IIS Express =====
+iisexpress/
+
+# ===== Angular (Client) =====
+node_modules/
+dist/
+.angular/
+tmp/
+src/environments/*.prod.ts
+
+# ===== System =====
+Thumbs.db
+Desktop.ini
+
+# ===== Other =====
+*.DS_Store
