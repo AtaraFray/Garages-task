@@ -1,7 +1,5 @@
-import { Component , OnInit } from '@angular/core';
-import { GovApiService } from '../../services/gov-api.service';
+import { Component , OnInit , Input ,Output ,EventEmitter} from '@angular/core';
 import { Garage } from '../../classes/garage';
-import { GarageService } from '../../services/garage.service';
 
 // Angular materials imports
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
@@ -18,25 +16,15 @@ import { MatFormFieldModule } from '@angular/material/form-field';
   styleUrl: './gov-garages.component.scss'
 })
 export class GovGaragesComponent  {
-  isLoading: boolean = true;
+  @Input() garages: Array<Garage> = [];
+  @Input() isLoading: boolean = true;
+  @Output() addSelected = new EventEmitter<Array<Garage>>();
+
   selectedGarages = new FormControl<Garage[]>([]);
-  garagersList: Array<Garage> = [];
 
-  constructor(private govApiService: GovApiService, private garageService: GarageService) { }
-
-  ngOnInit(): void {
-    this.govApiService.getGovGarages().subscribe(data => {
-      this.garagersList = data;
-      this.isLoading = false;
-    })
+  addGarages() {
+    this.addSelected.emit(this.selectedGarages.value  || []);
   }
 
-  addGarages(): void {
-    this.garageService.addGarages(this.selectedGarages.value).subscribe(
-      data => {
-        console.log(data)
-      }
-    )
-  }
 }
 

@@ -1,0 +1,66 @@
+<div class="example-container mat-elevation-z8">
+    <mat-table #table [dataSource]="dataSource">
+
+        <ng-container matColumnDef="garageId">
+            <mat-header-cell *matHeaderCellDef> מזהה מוסך </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.garageId}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="garageName">
+            <mat-header-cell *matHeaderCellDef> שם מוסך </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.garageName}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="garageNumber">
+            <mat-header-cell *matHeaderCellDef> מספר מוסך </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.garageNumber}} </mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="garageCodeType">
+            <mat-header-cell *matHeaderCellDef> קוד סוג מוסך </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.garageCodeType}} </mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="garageType">
+            <mat-header-cell *matHeaderCellDef> סוג מוסך </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.garageType}} </mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="garageAddress">
+            <mat-header-cell *matHeaderCellDef> כתובת </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.garageAddress}} </mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="garageCity">
+            <mat-header-cell *matHeaderCellDef> יישוב </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.garageCity}} </mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="garagePhone">
+            <mat-header-cell *matHeaderCellDef> טלפון </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.garagePhone}} </mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="garagePostalCode">
+            <mat-header-cell *matHeaderCellDef> מיקוד </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.garagePostalCode}} </mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="garageProfession">
+            <mat-header-cell *matHeaderCellDef> קוד מקצוע </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.garageProfession}} </mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="profession">
+            <mat-header-cell *matHeaderCellDef> מקצוע </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.profession}} </mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="professionManager">
+            <mat-header-cell *matHeaderCellDef> מנהל מקצוע </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.professionManager}} </mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="registerCompany">
+            <mat-header-cell *matHeaderCellDef> רשם חברות </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.registerCompany}} </mat-cell>
+        </ng-container>
+
+
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns;">
+        </mat-row>
+    </mat-table>
+</div>
+
+
