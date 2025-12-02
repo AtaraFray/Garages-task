@@ -13,5 +13,8 @@ namespace GaragesDAL
 
         Task AddGarage(Garages garage);
 
+        // הוספת פונקציה האם מוסך קיים 
+        Task<bool> IsGarageExist(int garageId);
+
     }
 }
