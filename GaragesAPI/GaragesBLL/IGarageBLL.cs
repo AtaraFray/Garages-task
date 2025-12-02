@@ -12,6 +12,6 @@ namespace GaragesBLL
     {
         Task<List<GarageDTO>> GetAllGarages();
 
-        Task AddGarage(GarageDTO garage);
+        Task AddGarage(List<GarageDTO> garage);
     }
 }

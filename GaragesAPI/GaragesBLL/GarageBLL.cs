@@ -22,15 +22,16 @@ namespace GaragesBLL
             mapper = config.CreateMapper();
         }
 
-        public async Task AddGarage(GarageDTO garage)
+        public async Task AddGarage(List<GarageDTO> garages)
         {
-            //db שליחה לבדיקה אם מוסך קיים כבר ב
-            bool exists = await garageDAL.IsGarageExist((int)garage.GarageId);
-            if (!exists)
-             await garageDAL.AddGarage(mapper.Map<GarageDTO, Garages>(garage));
-            else
-                throw new Exception("Garage already exists");
-
+            foreach (var garage in garages)
+            {
+                bool exists = await garageDAL.IsGarageExist((int)garage.GarageId);
+                if (!exists)
+                    await garageDAL.AddGarage(mapper.Map<GarageDTO, Garages>(garage));
+                else
+                    throw new Exception("Garage already exists");
+            }
         }
 
 

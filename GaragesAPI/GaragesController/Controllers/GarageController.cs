@@ -35,12 +35,12 @@ namespace GaragesController.Controllers
 
         // POST api/<GarageController>
         [HttpPost]
-        public async Task<ActionResult> AddGarage([FromBody] GarageDTO newGarage)
+        public async Task<ActionResult> AddGarage([FromBody] List<GarageDTO> newGarages)
         {
             try
             {
-                await garageBLL.AddGarage(newGarage);
-                return Ok("Garage added successfully");
+                await garageBLL.AddGarage(newGarages);
+                return Ok("Garages added successfully");
             }
             catch (Exception ex)
             {
