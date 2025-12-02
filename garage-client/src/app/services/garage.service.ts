@@ -17,6 +17,6 @@ export class GarageService {
   }
 
   addGarages(garages : Array<Garage>):Observable<any>{
-    return this.httpClient.post(this.garageApiUrl , garages);
+    return this.httpClient.post(this.garageApiUrl , garages , { responseType: 'text' });
   }
 }

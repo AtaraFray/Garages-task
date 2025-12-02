@@ -1,1 +1,7 @@
-<p>garages works!</p>
+<ul>
+    @for (item of garages; track $index) {
+        <li>{{item.garageName}} - {{item.garageId}}</li>
+    }
+</ul>
+
+<button (click)="addGarages()">הוסף</button>

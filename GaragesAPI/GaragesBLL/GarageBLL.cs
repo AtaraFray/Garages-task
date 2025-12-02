@@ -29,8 +29,6 @@ namespace GaragesBLL
                 bool exists = await garageDAL.IsGarageExist((int)garage.GarageId);
                 if (!exists)
                     await garageDAL.AddGarage(mapper.Map<GarageDTO, Garages>(garage));
-                else
-                    throw new Exception("Garage already exists");
             }
         }
 
