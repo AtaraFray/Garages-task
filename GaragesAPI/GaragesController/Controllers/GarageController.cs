@@ -11,9 +11,14 @@ namespace GaragesController.Controllers
     public class GarageController : ControllerBase
     {
         IGarageBLL garageBLL;
-        public GarageController(IGarageBLL _garageBLL)
+        private IGovApiService govApiService;
+
+        public GarageController(IGarageBLL _garageBLL , IGovApiService _govApiService)
         {
             this.garageBLL = _garageBLL;
+            // הממשלתי  api הוספת השירות של ה 
+            this.govApiService = _govApiService;
+
         }
 
         // GET: api/<GarageController>
@@ -42,6 +47,19 @@ namespace GaragesController.Controllers
                 return StatusCode(500, "Error adding garage");
             }
 
+        }
+
+        //חיצוני api של שימוש בפונקצית התממשקות ל controller הוספת 
+
+        // GET: api/<GarageController>
+        [HttpGet("gov")]
+        public async Task<ActionResult<List<GarageDTO>>> GetGovGarages()
+        {
+            var garages = await govApiService.GetGovGaragesAsync();
+            if (garages == null)
+                return NotFound();
+
+            return Ok(garages);
         }
 
     }
