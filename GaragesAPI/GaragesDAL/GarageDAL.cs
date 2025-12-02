@@ -27,5 +27,13 @@ namespace GaragesDAL
             await garagesDb.Garages.AddAsync(garage);
             await garagesDb.SaveChangesAsync();
         }
+
+        // פונקציה בדיקה האם קיים מוסך במסד נתונים
+        public async Task<bool> IsGarageExist(int garageId)
+        {
+            var ifExist = await garagesDb.Garages.FirstOrDefaultAsync(garage => garage.GarageId == garageId);
+            return ifExist != null;
+
+        }
     }
 }
