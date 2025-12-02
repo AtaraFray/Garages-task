@@ -1,16 +1,43 @@
+
+# ===== Visual Studio =====
+.vs/
 *.user
 *.suo
+*.userosscache
+*.sln.docstates
 
+# ===== Build =====
 bin/
 obj/
+Debug/
+Release/
 
+# ===== NuGet =====
 packages/
+*.nupkg
+project.lock.json
+project.fragment.lock.json
 
-# Logs
+# ===== Logs =====
 *.log
 
+# ===== Cache / Temp =====
 *.cache
 *.tmp
 
-.vs/
-*.vsidx
+# ===== IIS Express =====
+iisexpress/
+
+# ===== Angular (Client) =====
+node_modules/
+dist/
+.angular/
+tmp/
+src/environments/*.prod.ts
+
+# ===== System =====
+Thumbs.db
+Desktop.ini
+
+# ===== Other =====
+*.DS_Store
