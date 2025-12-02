@@ -15,6 +15,8 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IGarageBLL, GarageBLL>();
 builder.Services.AddScoped<IGaragesDAL, GarageDAL>();
+//api של ה service הוספת ה
+builder.Services.AddScoped<IGovApiService, GovApiService>();
 
 var connectionString = builder.Configuration.GetConnectionString("Connection");
 builder.Services.AddDbContext<GaragesDBContext>(options =>
