@@ -1,0 +1,22 @@
+* {
+  direction: rtl;
+  text-align: center;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+mat-form-field {
+  width: 45%;
+}
+
+.spinner-container,
+.btn-add {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}

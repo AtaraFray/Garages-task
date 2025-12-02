@@ -1,6 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { GarageService } from '../../services/garage.service';
-import { Garage } from '../../classes/garage';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-garages',
@@ -9,23 +7,7 @@ import { Garage } from '../../classes/garage';
   templateUrl: './garages.component.html',
   styleUrl: './garages.component.scss'
 })
-export class GaragesComponent implements OnInit {
+export class GaragesComponent {
 
-  garages: Array<Garage> = [];
-  newGarages: Array<Garage> = [];
-
-  constructor(private garageService: GarageService) { }
-
-
-  ngOnInit(): void {
-    this.garageService.getGarages().subscribe(data => {
-      this.garages = data
-    })
-
-  }
-  addGarages(): void {
-    this.garageService.addGarages(this.newGarages).subscribe(
-      data => console.log(data)
-    )
-  }
+ 
 }

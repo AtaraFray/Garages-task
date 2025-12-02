@@ -1,5 +1,21 @@
-<ul>
-    @for (item of govGarages; track $index) {
-        <li>{{item.garageName}} - {{item.garageId}}</li>
-    }
-</ul>
+<h1>ניהול מוסכים</h1>
+@if(isLoading){
+<div class="spinner-container">
+    <mat-spinner></mat-spinner>
+</div>
+}
+@else {
+<div class="card">
+    <mat-form-field>
+        <mat-label>בחירת מוסכים</mat-label>
+        <mat-select [formControl]="selectedGarages" multiple>
+            @for (garage of garagersList; track garage) {
+            <mat-option [value]="garage">{{garage.garageName}} - {{garage.garageNumber}}</mat-option>
+            }
+        </mat-select>
+    </mat-form-field>
+</div>
+}
+<div class="btn-add">
+    <button mat-raised-button color="primary" (click)="addGarages()">הוספת המסומנים</button>
+</div>

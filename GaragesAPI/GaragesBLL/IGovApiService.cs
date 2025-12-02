@@ -11,6 +11,5 @@ namespace GaragesBLL
     public interface IGovApiService
     {
         Task<List<GarageDTO>> GetGovGaragesAsync();
-
     }
 }

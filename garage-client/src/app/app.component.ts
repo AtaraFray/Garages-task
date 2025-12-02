@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
-import { GovGaragesComponent } from "./components/gov-garages/gov-garages.component";
-import { GaragesComponent } from "./components/garages/garages.component";
+import { GovGaragesComponent } from './components/gov-garages/gov-garages.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [GovGaragesComponent, GaragesComponent],
+  imports: [GovGaragesComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
