@@ -136,12 +136,11 @@ Frontend will be available at:
 
 
 
-| **Method** | **Endpoint**                | **Description**                                    |
-
-| ------ | ----------------------- | ---------------------------------------------- |
-| GET    | `/api/garages/gov` | Fetches data from government API + saves to DB |
-| GET    | `/api/garages`          | Retrieves saved garages from DB                |
-| POST   | `/api/garages`          | Adds new garage to DB                               |
+| Method | Endpoint | Description |
+| ------ | -------- | ----------- |
+| GET | /api/garages/gov | Fetches data from government API + saves to DB |
+| GET | /api/garages | Retrieves saved garages from DB |
+| POST | /api/garages | Adds new garage to DB |
 
 
 
