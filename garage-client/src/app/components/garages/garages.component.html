@@ -1,5 +1,10 @@
 <h1>מוסכים שמורים</h1>
+
+
+
 <div class="example-container mat-elevation-z8">
+    <textarea matInput placeholder="סינון לפי שם / מקצוע / כתובת / יישוב " (input)="search($event)"
+        class="search-input"></textarea>
     <mat-table #table [dataSource]="dataSource">
 
         <ng-container matColumnDef="garageId">
@@ -63,5 +68,3 @@
         </mat-row>
     </mat-table>
 </div>
-
-

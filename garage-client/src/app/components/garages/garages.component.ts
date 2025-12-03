@@ -22,9 +22,27 @@ export class GaragesComponent implements OnChanges  {
 
   ngOnChanges(): void {
     this.dataSource = new MatTableDataSource<Element>(this.garages);
+
+    if (this.dataSource != null ){
+      this.dataSource.filterPredicate = (data: any, filter: string) => {
+        const text = filter.trim().toLowerCase();
+        return (
+          data.garageName?.toLowerCase().includes(text) ||
+          data.profession?.toLowerCase().includes(text) ||
+          data.garageAddress?.toLowerCase().includes(text) ||
+          data.garageCity?.toLowerCase().includes(text)
+        );
+      };
+    }
+
   }
 
-}
+  search(event: any){
+    const filterValue = (event.target as HTMLInputElement).value;
+    this.dataSource.filter = filterValue.trim().toLowerCase();
+  }
+
+  }
 
 
 export interface Element {
