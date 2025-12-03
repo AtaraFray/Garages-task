@@ -120,21 +120,15 @@ Frontend will be available at:
 
 
 
-\### Init appliacation
+### Init application
+![On init](./screenshots/begin.png)
 
-!\[On init  ](./screenshots/begin.png)
+### Garage Table
+![Garage select](./screenshots/onselect.png)
 
+### Add Garage Flow
+![Add Garage](./screenshots/added.png)
 
-
-\### Garage Table
-
-!\[Garage select ](./screenshots/onselect.png)
-
-
-
-\### Add Garage Flow
-
-!\[Add Garage](./screenshots/added.png)
 
 
 
